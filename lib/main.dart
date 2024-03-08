@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_push_pop/form.dart';
 
-void main(){
-  runApp(MyApp());
-}
+import 'package:device_preview/device_preview.dart';
+
+void main() => runApp(
+  DevicePreview(
+    enabled: true,
+    builder: (context) => MyApp(), // Wrap your app
+  ),
+);
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
